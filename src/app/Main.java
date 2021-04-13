@@ -20,7 +20,12 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Blockchain
-        commandManager = new CommandManager("localhost", "2896", "multichainrpc", "9pEG44gfCoKmdtTQvULFuRc6NvRbyX6kFerkotkncNfD");
+        commandManager = new CommandManager(
+                System.getProperty("MULTICHAIN_HOST", "localhost"),
+                System.getProperty("MULTICHAIN_PORT", "2896"),
+                System.getProperty("MULTICHAIN_RPCZUSER", "multichainrpc"),
+                System.getProperty("MULTICHAIN_RPCPASSWORD", "")
+        );
         try {
             commandManager.invoke(CommandElt.SUBSCRIBE, "vendedores");
             commandManager.invoke(CommandElt.SUBSCRIBE, "ganancias");
