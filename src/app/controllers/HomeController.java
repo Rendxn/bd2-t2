@@ -8,17 +8,17 @@ import javafx.fxml.FXML;
 
 
 
-public class Controller {
+public class HomeController {
     @FXML
-    private void switchQuery(ActionEvent event) throws IOException {
-        Main.setRoot("views/query");
+    private void goToShowSellers(ActionEvent event) throws IOException {
+        Main.setRoot("views/show.seller");
     }
     @FXML
-    private void switchRegistrySeller(ActionEvent event) throws IOException {
-        Main.setRoot("views/registrySeller");
+    private void goToCreateSeller(ActionEvent event) throws IOException {
+        Main.setRoot("views/create.seller");
     }
     @FXML
-    private void switchRegistryProfit(ActionEvent event) throws IOException {
-        Main.setRoot("views/registryProfit");
+    private void goToCreateProfit(ActionEvent event) throws IOException {
+        Main.setRoot("views/create.profit");
     }
 }
