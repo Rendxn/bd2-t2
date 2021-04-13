@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CreateSellerController">
+   <children>
+      <SplitPane dividerPositions="0.8743718592964824" layoutY="7.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="169.0" layoutY="127.0" prefHeight="343.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="538.0" minWidth="10.0" prefWidth="517.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="name" prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="1" />
+                        <TextField fx:id="id" prefHeight="37.0" prefWidth="538.0" GridPane.rowIndex="3" />
+                        <TextField fx:id="phone" prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="5" />
+                        <Label alignment="CENTER" prefHeight="58.0" prefWidth="539.0" text="Nombre:" />
+                        <Label alignment="CENTER" prefHeight="58.0" prefWidth="546.0" text="Cedula:" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" prefHeight="57.0" prefWidth="560.0" text="Telefono:" GridPane.rowIndex="4" />
+                        <Text fx:id="msgBox"></Text>
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="goHome" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchHome" text="Inicio" />
+                  <Button fx:id="submitBtn" layoutX="525.0" layoutY="11.0" mnemonicParsing="false" text="Ingresar" onAction="#createSeller"/>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

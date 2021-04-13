@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.ShowSellerController">
+   <children>
+      <Button fx:id="goHome" layoutX="278.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchHome" text="Inicio" />
+      <TableView fx:id="table" layoutX="34.0" layoutY="27.0" prefHeight="321.0" prefWidth="532.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="158.0" text="Cedula" />
+          <TableColumn fx:id="profit" minWidth="0.0" prefWidth="373.0" text="Ganancias" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
