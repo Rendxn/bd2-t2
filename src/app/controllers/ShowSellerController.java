@@ -86,8 +86,10 @@ public class ShowSellerController implements Initializable {
             // And set the CellValueFactory
             ObservableList<Seller> $sellers = FXCollections.observableList(sellers);
             table.setItems($sellers);
-            id.setCellValueFactory(new PropertyValueFactory<>(sellers.get(0).idProperty().getName()));
-            profit.setCellValueFactory(new PropertyValueFactory<>(sellers.get(0).profitProperty().getName()));
+            if (!sellers.isEmpty()) {
+                id.setCellValueFactory(new PropertyValueFactory<>(sellers.get(0).idProperty().getName()));
+                profit.setCellValueFactory(new PropertyValueFactory<>(sellers.get(0).profitProperty().getName()));
+            }
 
         } catch (MultichainException e) {
             e.printStackTrace();

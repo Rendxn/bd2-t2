@@ -15,6 +15,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
+import javafx.scene.paint.Color;
+import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
 import multichain.object.*;
 import multichain.command.*;
@@ -72,6 +74,7 @@ public class CreateProfitController implements Initializable {
         } catch (MultichainException e) {
             e.printStackTrace();
             msgBox.setText("No se pudo agregar la ganancia a " + cedula + ". " + e.getMessage());
+            msgBox.setFill(Color.RED);
             return;
         }
     }
