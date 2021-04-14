@@ -57,7 +57,7 @@ public class ShowSellerController implements Initializable {
                 // LinkedTreeMap returned by the getData method
                 LinkedTreeMap data = (LinkedTreeMap) streamKeyItem.getData();
                 LinkedTreeMap json = (LinkedTreeMap) data.get("json");
-                Double profit = (Double) json.get("valor");
+                double profit = Double.parseDouble(json.get("valor").toString());
 
                 // Key (id)
                 ArrayList<String> keys = (ArrayList<String>) streamKeyItem.getKeys();
