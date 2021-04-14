@@ -9,7 +9,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegistrySeller">
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CreateSellerController">
    <children>
       <SplitPane dividerPositions="0.8743718592964824" layoutY="7.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -28,12 +29,13 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <TextField prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="1" />
-                        <TextField prefHeight="37.0" prefWidth="538.0" GridPane.rowIndex="3" />
-                        <TextField prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="5" />
+                        <TextField fx:id="name" prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="1" />
+                        <TextField fx:id="id" prefHeight="37.0" prefWidth="538.0" GridPane.rowIndex="3" />
+                        <TextField fx:id="phone" prefHeight="35.0" prefWidth="538.0" GridPane.rowIndex="5" />
                         <Label alignment="CENTER" prefHeight="58.0" prefWidth="539.0" text="Nombre:" />
                         <Label alignment="CENTER" prefHeight="58.0" prefWidth="546.0" text="Cedula:" GridPane.rowIndex="2" />
                         <Label alignment="CENTER" prefHeight="57.0" prefWidth="560.0" text="Telefono:" GridPane.rowIndex="4" />
+                        <Text fx:id="msgBox"></Text>
                      </children>
                   </GridPane>
                </children>
@@ -41,7 +43,7 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Button fx:id="goHome" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchHome" text="Inicio" />
-                  <Button fx:id="inputData" layoutX="525.0" layoutY="11.0" mnemonicParsing="false" text="Ingresar" />
+                  <Button fx:id="submitBtn" layoutX="525.0" layoutY="11.0" mnemonicParsing="false" text="Ingresar" onAction="#createSeller"/>
                </children>
             </AnchorPane>
         </items>

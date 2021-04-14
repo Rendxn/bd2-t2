@@ -10,7 +10,8 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegistryProfit">
+<?import javafx.scene.text.Text?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.CreateProfitController">
    <children>
       <SplitPane dividerPositions="0.8567839195979899" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -31,8 +32,9 @@
                      <children>
                         <Label alignment="CENTER" prefHeight="85.0" prefWidth="542.0" text="Cedula:" GridPane.rowIndex="1" />
                         <Label alignment="CENTER" prefHeight="84.0" prefWidth="516.0" text="Ganancia:" GridPane.rowIndex="4" />
-                        <ChoiceBox prefHeight="40.0" prefWidth="547.0" GridPane.rowIndex="2" />
-                        <TextField prefHeight="42.0" prefWidth="498.0" GridPane.rowIndex="5" />
+                        <ChoiceBox fx:id="idChoiceBox" prefHeight="40.0" prefWidth="547.0" GridPane.rowIndex="2" />
+                        <TextField fx:id="profitTextField" prefHeight="42.0" prefWidth="498.0" GridPane.rowIndex="5" />
+                        <Text fx:id="msgBox"></Text>
                      </children>
                   </GridPane>
                </children>
@@ -40,7 +42,7 @@
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                <children>
                   <Button fx:id="goHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchHome" text="Inicio" />
-                  <Button fx:id="inputProfit" layoutX="525.0" layoutY="14.0" mnemonicParsing="false" text="Ingresar" />
+                  <Button fx:id="inputProfit" layoutX="525.0" layoutY="14.0" mnemonicParsing="false" text="Ingresar" onAction="#createProfit" />
                </children>
             </AnchorPane>
         </items>
