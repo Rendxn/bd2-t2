@@ -54,7 +54,7 @@ public class CreateSellerController {
             e.printStackTrace();
             System.out.println(e.getMessage());
             msgBox.setFill(Color.RED);
-            msgBox.setText("No se pudo agregar el vendedor.");
+            msgBox.setText("No se pudo agregar el vendedor. " + e.getMessage());
             return;
         }
     }

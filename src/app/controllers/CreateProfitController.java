@@ -76,7 +76,7 @@ public class CreateProfitController implements Initializable {
             e.printStackTrace();
             System.out.println(e.getMessage());
             msgBox.setFill(Color.RED);
-            msgBox.setText("No se pudo agregar la ganancia a " + cedula + ".");
+            msgBox.setText("No se pudo agregar la ganancia a " + cedula + ". " + e.getMessage());
             profitTextField.clear();
             return;
         }
