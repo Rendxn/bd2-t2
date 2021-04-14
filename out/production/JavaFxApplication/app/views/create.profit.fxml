@@ -42,7 +42,7 @@
                <children>
                   <Button fx:id="goHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchHome" text="Inicio" />
                   <Button fx:id="inputProfit" layoutX="525.0" layoutY="14.0" mnemonicParsing="false" onAction="#createProfit" text="Ingresar" />
-                  <Text fx:id="msgBox" layoutX="187.0" layoutY="31.0" textAlignment="CENTER" wrappingWidth="225.0" />
+                  <Text fx:id="msgBox" layoutX="78.0" layoutY="31.0" textAlignment="CENTER" wrappingWidth="443.0" />
                </children>
             </AnchorPane>
         </items>

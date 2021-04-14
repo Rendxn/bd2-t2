@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import multichain.object.*;
 import multichain.command.*;
@@ -44,13 +45,16 @@ public class CreateSellerController {
 
         try {
             Main.commandManager.invoke(CommandElt.PUBLISH, "vendedores", cedula, extJson);
+            msgBox.setFill(Color.GREEN);
             msgBox.setText("Se agregó con éxito.");
             id.clear();
             name.clear();
             phone.clear();
         } catch (MultichainException e) {
             e.printStackTrace();
-            msgBox.setText("No se pudo agregar el vendedor. " + e.getMessage());
+            System.out.println(e.getMessage());
+            msgBox.setFill(Color.RED);
+            msgBox.setText("No se pudo agregar el vendedor.");
             return;
         }
     }

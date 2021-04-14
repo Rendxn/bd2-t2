@@ -69,12 +69,15 @@ public class CreateProfitController implements Initializable {
 
         try {
             Main.commandManager.invoke(CommandElt.PUBLISH, "ganancias", cedula, extJson);
+            msgBox.setFill(Color.GREEN);
             msgBox.setText("Se agregó con éxito la ganancia a " + cedula);
             profitTextField.clear();
         } catch (MultichainException e) {
             e.printStackTrace();
-            msgBox.setText("No se pudo agregar la ganancia a " + cedula + ". " + e.getMessage());
+            System.out.println(e.getMessage());
             msgBox.setFill(Color.RED);
+            msgBox.setText("No se pudo agregar la ganancia a " + cedula + ".");
+            profitTextField.clear();
             return;
         }
     }
