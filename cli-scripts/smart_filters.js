@@ -1,4 +1,5 @@
 // Smart filter para stream vendedores.
+// Filtro 1
 function filterstreamitem() {
   const item = getfilterstreamitem();
   if (item.keys.length != 1) return "Debe tener una sola clave.";
@@ -13,6 +14,7 @@ function filterstreamitem() {
 }
 
 // Smart filter para stream ganancias.
+// Filtro 2
 function filterstreamitem() {
   const item = getfilterstreamitem();
   if (item.keys.length != 1) return "Debe tener una sola clave.";
