@@ -1,5 +1,0 @@
-:: Si usas CMD:
-multichain-cli empresa publish vendedores cedula1 "{\"json\":{\"nombre\":\"John Doe\",\"telefono\":\"1234567\"}}"
-multichain-cli empresa publish ganancias cedula1 "{\"json\":{\"valor\":5004.344}}"
-:: Si usas PowerShell:
-multichain-cli empresa publish vendedores cedula1 "{`"json`":{`"nombre`":`"John Doe`",`"telefono`":`"1234567`"}}"
