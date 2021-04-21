@@ -11,6 +11,19 @@
 * JDK 15
 
 Es necesario tener una blockchain llamada empresa con un stream llamado vendedores y otro ganancias. También se debe ejecutar el comando `multichaind empresa -daemon` para conectarnos y poder ejecutar el programa generado a través de JavaFX.
+Además, puede incluir MULTICHAIN_HOST, MULTICHAIN_PORT, MULTICHAIN_RPCUSER y MULTICHAIN_RPCPASSWORD como propiedades de lanzamiento así:
+
+```
+javac 
+--module-path
+"libraries/javafx-sdk-16/lib"
+--add-modules
+javafx.controls,javafx.fxml
+-DMULTICHAIN_HOST=localhost
+-DMULTICHAIN_PORT=2896
+-DMULTICHAIN_RPCUSER=multichainrpc
+-DMULTICHAIN_RPCPASSWORD=password
+```
 
 ## Punto 1
 
