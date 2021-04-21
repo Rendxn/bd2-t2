@@ -23,7 +23,7 @@ public class Main extends Application {
         commandManager = new CommandManager(
                 System.getProperty("MULTICHAIN_HOST", "localhost"),
                 System.getProperty("MULTICHAIN_PORT", "2896"),
-                System.getProperty("MULTICHAIN_RPCZUSER", "multichainrpc"),
+                System.getProperty("MULTICHAIN_RPCUSER", "multichainrpc"),
                 System.getProperty("MULTICHAIN_RPCPASSWORD", "")
         );
         try {
